@@ -1,8 +1,8 @@
-# Netlify Build Plugin: Persist the Gatsby Cache Between Builds
+# Netlify Build Plugin: Persist the Gridsome Cache Between Builds
 
-Persist the Gatsby cache between Netlify builds for huge build speed improvements! ⚡️
+Persist the Gridsome cache between Netlify builds for huge build speed improvements! ⚡️
 
-> NOTE: [Netlify Build Plugins](https://docs.netlify.com/configure-builds/plugins/?utm_source=github&utm_medium=netlify-plugin-gatsby-cache-jl&utm_campaign=devex) are in beta.
+> NOTE: [Netlify Build Plugins](https://docs.netlify.com/configure-builds/plugins/?utm_source=github&utm_medium=netlify-plugin-gridsome-cache-jl&utm_campaign=devex) are in beta.
 
 ## Usage
 
@@ -10,10 +10,10 @@ To install, add the following lines to your `netlify.toml` file:
 
 ```toml
 [build]
-  publish = "public"
+  publish = "dist"
 
 [[plugins]]
-package = "netlify-plugin-gatsby-cache"
+package = "netlify-plugin-gridsome-cache"
 ```
 
 Note: The `[[plugins]]` line is required for each plugin, even if you have other plugins in your `netlify.toml` file already.
@@ -22,7 +22,7 @@ This plugin determines the location of your `.cache` folder by looking at the `p
 
 ## How much of a difference does this plugin make in build times?
 
-Each Gatsby site is different, so build times vary widely between them, but one common slowdown in Gatsby builds is processing and transforming images. Gatsby is smart enough to check if these transformations have already been done and skip them, but in order to get that benefit in a build pipeline (e.g. Netlify) the `public` and `.cache` directories need to be preserved between builds. That’s what this plugin does!
+Each Gatsby site is different, so build times vary widely between them, but one common slowdown in Gatsby builds is processing and transforming images. Gatsby is smart enough to check if these transformations have already been done and skip them, but in order to get that benefit in a build pipeline (e.g. Netlify) the `dist` and `.cache` directories need to be preserved between builds. That’s what this plugin does!
 
 |                                                            | No Cache                                                                                                | Cache                                                                                                   | Savings |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------|
@@ -31,6 +31,16 @@ Each Gatsby site is different, so build times vary widely between them, but one 
 
 tl;dr: Repeat builds with lots of images will be _much_ faster. With few or no images, the difference will be there, but it won’t be as pronounced.
 
+\*note: the above differences are cited from [the source repo `netlify-plugin-gatsby-cache`](https://github.com/jlengstorf/netlify-plugin-gatsby-cache#how-much-of-a-difference-does-this-plugin-make-in-build-times)
+
 ## Want to learn how to create your own Netlify Build Plugins?
 
 Check out [Sarah Drasner’s excellent tutorial](https://www.netlify.com/blog/2019/10/16/creating-and-using-your-first-netlify-build-plugin/?utm_source=github&utm_medium=netlify-plugin-gatsby-cache-jl&utm_campaign=devex)!
+
+## Credits
+
+Thank you to @jlengstorf whose work this repo is forked from; [jlengstorf/netlify-plugin-gatsby-cache](https://github.com/jlengstorf/netlify-plugin-gatsby-cache).
+
+## License
+
+MIT
