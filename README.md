@@ -13,7 +13,7 @@ To install, add the following lines to your `netlify.toml` file:
   publish = "dist"
 
 [[plugins]]
-package = "netlify-plugin-gridsome-cache"
+  package = "netlify-plugin-gridsome-cache"
 ```
 
 Note: The `[[plugins]]` line is required for each plugin, even if you have other plugins in your `netlify.toml` file already.
