@@ -2,7 +2,7 @@
 
 Persist the Gridsome cache between Netlify builds for huge build speed improvements! ⚡️
 
-> NOTE: [Netlify Build Plugins](https://docs.netlify.com/configure-builds/plugins/?utm_source=github&utm_medium=netlify-plugin-gridsome-cache-jl&utm_campaign=devex) are in beta.
+What are Netlify build plugins? Check out [the announcement page on Netlify](https://www.netlify.com/products/build/plugins/).
 
 ## Usage
 
