@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-gridsome-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Persist the Gridsome cache between Netlify builds for huge build speed improvements!",
   "main": "index.js",
   "repository": "https://github.com/edm00se/netlify-plugin-gridsome-cache.git",
