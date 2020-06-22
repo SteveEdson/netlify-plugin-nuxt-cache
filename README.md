@@ -28,14 +28,13 @@ This plugin determines the location of your `.cache` folder by looking at the `p
 
 Each Gatsby site is different, so build times vary widely between them, but one common slowdown in Gatsby builds is processing and transforming images. Gatsby is smart enough to check if these transformations have already been done and skip them, but in order to get that benefit in a build pipeline (e.g. Netlify) the `dist` and `.cache` directories need to be preserved between builds. That’s what this plugin does!
 
-|                                                            | No Cache                                                                                                | Cache                                                                                                   | Savings |
-|------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------|
-| * 231 GraphQL queries<br>* 1,871 images<br>* 224 pages     | 293207ms ([build log](https://app.netlify.com/sites/lengstorf/deploys/5dceed27d58a580008daaccc))        | 72835ms ([build log](https://app.netlify.com/sites/lengstorf/deploys/5dcef2463da4810008d48aaa))         | 75%     |
-| * 5 GraphQL queries<br>* No image processing<br>* 32 pages | 22072ms ([build log](https://app.netlify.com/sites/build-plugin-test/deploys/5dceed49e746a200091c76fe)) | 15543ms ([build log](https://app.netlify.com/sites/build-plugin-test/deploys/5dceedbfad95d0000bcd46d1)) | 30%     |
+|                                                       | No Cache | Cache | Savings |
+| ----------------------------------------------------- | -------- | ----- | ------- |
+| _ 231 GraphQL queries<br>_ 295 images<br>\* 295 pages | 27.5s    | 22.4s | 22%     |
 
 tl;dr: Repeat builds with lots of images will be _much_ faster. With few or no images, the difference will be there, but it won’t be as pronounced.
 
-\*note: the above differences are cited from [the source repo `netlify-plugin-gatsby-cache`](https://github.com/jlengstorf/netlify-plugin-gatsby-cache#how-much-of-a-difference-does-this-plugin-make-in-build-times)
+\*note: the above differences are cited from [my blog's repo](https://github.com/edm00se/blog); if you would like to submit a PR to add additional application size/savings data, I will be happy to accept it
 
 ## Want to learn how to create your own Netlify Build Plugins?
 
