@@ -4,9 +4,13 @@ Persist the Gridsome cache between Netlify builds for huge build speed improveme
 
 What are Netlify build plugins? Check out [the announcement page on Netlify](https://www.netlify.com/products/build/plugins/).
 
+### [One-click install to add this to your Gridsome site](https://app.netlify.com/plugins/netlify-plugin-gridsome-cache/install)
+
 ## Usage
 
-To install, add the following lines to your `netlify.toml` file:
+If you don’t want to use the [UI-based installation](http://app.netlify.com/plugins/netlify-plugin-gatsby-cache/install), you can install manually using `netlify.toml`.
+
+Add the following lines to your `netlify.toml` file:
 
 ```toml
 [build]
