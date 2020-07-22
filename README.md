@@ -8,7 +8,7 @@ What are Netlify build plugins? Check out [the announcement page on Netlify](htt
 
 ## Usage
 
-If you don’t want to use the [UI-based installation](http://app.netlify.com/plugins/netlify-plugin-gatsby-cache/install), you can install manually using `netlify.toml`.
+If you don’t want to use the [UI-based installation](https://app.netlify.com/plugins/netlify-plugin-gridsome-cache/install), you can install manually using `netlify.toml`.
 
 Add the following lines to your `netlify.toml` file:
 
@@ -22,11 +22,11 @@ Add the following lines to your `netlify.toml` file:
 
 Note: The `[[plugins]]` line is required for each plugin, even if you have other plugins in your `netlify.toml` file already.
 
-This plugin determines the location of your `.cache` folder by looking at the `publish` folder configured for Netlify deployment (this _must_ be set in your `netlify.toml` in the `[build]` section). This means that if your Gatsby site successfully deploys, it will be cached as well with no config required! 🎉
+This plugin determines the location of your `.cache` folder by looking at the `publish` folder configured for Netlify deployment (this _must_ be set in your `netlify.toml` in the `[build]` section). This means that if your Gridsome site successfully deploys, it will be cached as well with no config required! 🎉
 
 ## How much of a difference does this plugin make in build times?
 
-Each Gatsby site is different, so build times vary widely between them, but one common slowdown in Gatsby builds is processing and transforming images. Gatsby is smart enough to check if these transformations have already been done and skip them, but in order to get that benefit in a build pipeline (e.g. Netlify) the `dist` and `.cache` directories need to be preserved between builds. That’s what this plugin does!
+Each Gridsome site is different, so build times vary widely between them, but one common slowdown in Gridsome builds is processing and transforming images. Gridsome is smart enough to check if these transformations have already been done and skip them, but in order to get that benefit in a build pipeline (e.g. Netlify) the `dist` and `.cache` directories need to be preserved between builds. That’s what this plugin does!
 
 |                                                       | No Cache | Cache | Savings |
 | ----------------------------------------------------- | -------- | ----- | ------- |
