@@ -1,13 +1,13 @@
 {
-  "name": "netlify-plugin-gridsome-cache",
+  "name": "netlify-plugin-nuxt-cache",
   "version": "1.0.3",
-  "description": "Persist the Gridsome cache between Netlify builds for huge build speed improvements!",
+  "description": "Persist the Nuxt cache between Netlify builds for huge build speed improvements!",
   "main": "index.js",
-  "repository": "https://github.com/edm00se/netlify-plugin-gridsome-cache.git",
+  "repository": "https://github.com/SteveEdson/netlify-plugin-nuxt-cache.git",
   "bugs": {
-    "url": "https://github.com/edm00se/netlify-plugin-gridsome-cache/issues"
+    "url": "https://github.com/SteveEdson/netlify-plugin-nuxt-cache/issues"
   },
-  "author": "Eric McCormick (https://edm00se.codes/)",
+  "author": "Steve Edson (https://steveedson.co.uk/)",
   "license": "MIT",
   "keywords": [
     "netlify",
